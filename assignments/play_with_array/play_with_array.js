@@ -7,7 +7,11 @@ function getEven(arr) {
 
         Write you code below
     */
-
+    const checkEven=(value)=>{
+        return value%2==0
+    }
+    const result = arr.filter(checkEven)
+    return result
 }
 
 function multiplyByN(arr, n) {
@@ -15,9 +19,14 @@ function multiplyByN(arr, n) {
         Return an array whose elements are multiplied by n
         Example
             Input: [1,3,4,55], 3
-            Output: [3,9,13,165]
+            Output: [3,9,12,165]
         Write you code below
     */
+   const result=[]
+   arr.map((item)=>{
+       result.push(item*n)
+   })
+   return result
 }
 
 function removeNthElement(arr, n) {
@@ -28,6 +37,8 @@ function removeNthElement(arr, n) {
             Output: [1,3,4,7]
         Write you code below
     */
+   arr.splice(n,1)
+   return arr
 }
 
 module.exports = {
