@@ -1,12 +1,18 @@
 <html>
     <head>
         <title>Todo List</title>
+        <style>
+            p{
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <div>
-            <input type='text' name='todo_input'>
-            <button type='submit'>Add Todo</button>
-            <div class='todos'></div>
+            <input type='text' name='todo_input' id="input-box"> 
+            <button type='submit' onclick="handleSubmit()">Add Todo</button>
+            <span id="error"></span>
+            <div class='todos' id="todoList"></div>
         </div>
     </body>
     <script src='./script.js'></script>
